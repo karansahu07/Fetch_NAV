@@ -137,13 +137,13 @@ async function getNavAndSave() {
 }
 
 // Schedule at 10:00 AM every day
-cron.schedule('0 10 * * *', () => {
-  console.log('⏱️ Running NAV fetch job...');
-  getNavAndSave();
-});
+// cron.schedule('0 10 * * *', () => {
+//   console.log('⏱️ Running NAV fetch job...');
+//   getNavAndSave();
+// });
 
 
 // // Run every 1 minute
-// cron.schedule('* * * * *', () => {
-//   getNavAndSave();
-// });
+cron.schedule('* * * * *', () => {
+  getNavAndSave();
+});
